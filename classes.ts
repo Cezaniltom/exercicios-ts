@@ -1,38 +1,54 @@
-// type Aluno = {
-//     nome: string;
-//     altura: number;
-//     dataNasc: Date;
-//     modulosCursados: Array<string>; // string[] ou Array<string>
-//     ativo?: boolean;
-//     estudar?: () => void;
-//     parabenizar?: () => void;
-// };
-
-// let objAluno = {
-//     "nome": "Daniel Mariz",
-//     "altura": 1.79,
-//     "dataNasc": new Date("13-09-2024"),
-//     "modulosCursados": ["Frontend Estático", "Lógica de Programação"],
-//     estudar() {
-//         console.log(`${this.nome} está estudando...`);
-//     },
-//     parabenizar() {
-//         // se a data de hoje for igual à data de nascimento, deseje feliz aniversário
+// type Aluno = { // => Sempre com a Primeira letra maiuscula
+//     nome: string;        => props
+//     altura: number;      => props
+//     dataNasc: Date;      => props
+//     modulosCursados: Array<string>; // string[] ou Array<string>         => props
+//     ativo?: boolean;         => props
+//     estudar?: () => void;        => metodo
+//     parabenizar?: () => void;        => metodo
 // };
 
 
+
+
+//                                  ****IMPORTANTE****
 
 // // Classe é a representação em programação orientada a objetos de uma entidade da vida real
 // // Instância de uma classe é um "indivíduo" que pertence àquela classe
 // // Propriedades/Atributos de uma classe são as características que definem e ajudam a diferenciar instâncias dessa classe
 // // Métodos de uma classe são ações desempenhadas pelas instâncias daquela classe
+
+
+
+// let objAluno: Aluno = {
+//     "nome": "Daniel Mariz",
+//     "altura": 1.79,
+//     "dataNasc": new Date("13-09-2024"),
+//     "modulosCursados": ["Frontend Estático", "Lógica de Programação"],
+//     estudar() {
+//         console.log(`${this.nome} está estudando...`); => o this tá funcionando porque o metodo estudar está sendo passado direto. Em arrow function ele teria que pegar o           obtAluno.nome
+//     },
+
+//     parabenizar() {
+//         // se a data de hoje for igual à data de nascimento, deseje feliz aniversário
+//     }
+// };
+
+// console.log(objAluno)
+
+
+
+
 // class AlunoClass {
 //     // Declarando TODAS as propriedades da classe
+
 //     nome: string;
 //     altura: number;
 //     dataNasc: Date;
 //     modulosCursados: Array<string>; // string[] ou Array<string>
 //     ativo?: boolean;
+
+
 
 //     // O método CONSTRUTOR é o método executado quando criamos uma nova instância da classe
 //     // Ou seja, quando executarmos new AlunoClass()
@@ -43,6 +59,10 @@
 //         this.modulosCursados = modulosCursados;
 //         this.ativo = true;
 //     }
+
+
+
+
 
 //     estudar() {
 //         console.log(${this.nome} está estudando...);
@@ -74,13 +94,13 @@
 // alunoNovo2.parabenizar();
 // alunoNovo2.estudar();
 
-type animalTipo = peixe | reptil | anfibio | ave | mamifero;
+// type animalTipo = peixe | reptil | anfibio | ave | mamifero;
 
 
-class Animal {
-    nome: string;
+// class Animal {
+//     nome: string;
 
-    constructor(nome: string) {
-        this.nome = nome;
-    }
-}
+//     constructor(nome: string) {
+//         this.nome = nome;
+//     }
+// }
