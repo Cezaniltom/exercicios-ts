@@ -21,7 +21,7 @@ class AnimalClass {
         }
     }
 }
-const animalNovo = new AnimalClass('Leão', '2010-02-15', true, 'Panthera leo', 'mamifero');
+const animalNovo = new AnimalClass('Leão', '2010-02-15', true, 'Panthera leo', 'Mamifero');
 console.log(animalNovo);
 animalNovo.maturidade();
 const animalNovo2 = new AnimalClass('Lobo', '2015-07-30', false, 'Canis', 'Carnivoro');

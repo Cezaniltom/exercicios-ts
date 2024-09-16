@@ -1,3 +1,5 @@
+type TipoAnimal = 'Erbivoro' | 'Carnivoro' | 'Mamifero' | 'Peixe' | 'Ave' | 'Reptil';
+
 
 class AnimalClass {
 
@@ -5,12 +7,12 @@ class AnimalClass {
     tempoVida: Date;
     extincao: boolean;
     especie: string;
-    tipo: string;
+    tipo: TipoAnimal;
 
 
     // Array<string>
 
-    constructor(nome: string, tempoVida: string, extincao: boolean, especie:string, tipo: string) {
+    constructor(nome: string, tempoVida: string, extincao: boolean, especie:string, tipo: TipoAnimal) {
 
         this.nome = nome;
         this.tempoVida = new Date(tempoVida);
@@ -34,7 +36,7 @@ class AnimalClass {
 }
 
 
-const animalNovo = new AnimalClass('Leão', '2010-02-15', true, 'Panthera leo','mamifero')
+const animalNovo = new AnimalClass('Leão', '2010-02-15', true, 'Panthera leo','Mamifero')
 
 console.log(animalNovo)
 animalNovo.maturidade()
