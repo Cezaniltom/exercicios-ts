@@ -24,13 +24,16 @@ class AnimalClass {
 
     maturidade() {
 
-        const fase = this.tempoVida.getDay();
-        if(fase <= 3) {
-            console.log(`O ${this.nome} está na fase inicial da vida`)
-        } else if (fase > 3 && fase <= 5){
-            console.log(`O ${this.nome} está na fase da adolescencia`)
+        const hoje = new Date();
+        const atual = hoje.getFullYear() - this.tempoVida.getFullYear();
+
+
+        if(atual <= 3) {
+            console.log(`O(a) ${this.nome} está na fase inicial da vida`)
+        } else if (atual > 3 && atual <= 5){
+            console.log(`O(a) ${this.nome} está na fase da adolescencia`)
         } else {
-            console.log(`O ${this.nome} está na fase adulta`)
+            console.log(`O(a) ${this.nome} está na fase adulta`)
         }
     }
 }
@@ -43,7 +46,14 @@ animalNovo.maturidade()
 
 
 
-const animalNovo2 = new AnimalClass('Lobo', '2015-07-30', false, 'Canis', 'Carnivoro')
+const animalNovo2 = new AnimalClass('Lobo', '2020-07-30', false, 'Canis', 'Carnivoro')
 
 console.log(animalNovo2)
 animalNovo2.maturidade()
+
+
+
+const animalNovo3 = new AnimalClass('Baleia', '2022-03-14', false, 'Cachalote', 'Peixe')
+
+console.log(animalNovo3)
+animalNovo3.maturidade()
